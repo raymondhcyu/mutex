@@ -16,9 +16,9 @@ int main(void) {
 	CSemaphore cs2("CS2", 1, 1);
 
 	// Create two datapools, once for each producer
-	CDataPool dp1("MyDataPoolName", sizeof(struct MyDataPool));
+	CDataPool dp1("MyDataPoolName1", sizeof(struct MyDataPool));
 	dataPoolPointer1 = (struct MyDataPool*)dp1.LinkDataPool(); // link datapool
-	CDataPool dp2("MyDataPoolName", sizeof(struct MyDataPool));
+	CDataPool dp2("MyDataPoolName2", sizeof(struct MyDataPool));
 	dataPoolPointer2 = (struct MyDataPool*)dp2.LinkDataPool(); // link datapool
 
 	cout << "Consumer is running..." << endl;
@@ -28,14 +28,14 @@ int main(void) {
 			cout << "\nHit return to consume data from producer 1..." << endl;
 			getchar();
 			ps1.Wait();
-			cout << "Consumed " << dataPoolPointer2->x << " from producer 1..." << endl;
+			cout << "Consumed " << dataPoolPointer1->x << " from producer 1..." << endl;
 			cs1.Signal();
 		}
 		if (ps2.Read() > 0) {
 			cout << "\nHit return to consume data from producer 2..." << endl;
 			getchar();
 			ps2.Wait();
-			cout << "Consumed " << dataPoolPointer1->x << " from producer 2..." << endl;
+			cout << "Consumed " << dataPoolPointer2->x << " from producer 2..." << endl;
 			cs2.Signal();
 		}
 	}

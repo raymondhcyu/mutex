@@ -7,6 +7,7 @@ struct MyDataPool {
 };
 
 struct MyDataPool* dataPoolPointer1;
+struct MyDataPool* dataPoolPointer2;
 
 int main(void) {
 	CSemaphore ps1("PS1", 0, 1); // semaphore w/ init value 0; max 1
@@ -15,8 +16,10 @@ int main(void) {
 	CSemaphore cs2("CS2", 1, 1);
 
 	// Create two datapools, once for each producer
-	CDataPool dp1("MyDataPoolName", sizeof(struct MyDataPool));
+	CDataPool dp1("MyDataPoolName1", sizeof(struct MyDataPool));
 	dataPoolPointer1 = (struct MyDataPool*)dp1.LinkDataPool(); // link datapool
+	CDataPool dp2("MyDataPoolName2", sizeof(struct MyDataPool));
+	dataPoolPointer2 = (struct MyDataPool*)dp2.LinkDataPool(); // link datapool
 
 	CProcess p1("D:\\Documents\\CPEN333\\CPEN333Lab5\\Debug\\PartDDoubleProducerSingleConsumerChild.exe",
 		NORMAL_PRIORITY_CLASS,

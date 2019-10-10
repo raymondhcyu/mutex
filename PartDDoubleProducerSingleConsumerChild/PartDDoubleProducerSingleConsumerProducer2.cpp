@@ -6,6 +6,7 @@ struct MyDataPool {
 	int x;
 };
 
+struct MyDataPool* dataPoolPointer1;
 struct MyDataPool* dataPoolPointer2;
 
 int main(void) {
@@ -13,8 +14,10 @@ int main(void) {
 	CSemaphore cs1("CS1", 1, 1); // sempahore w/ init value 1; max 1
 	CSemaphore ps2("PS2", 0, 1);
 	CSemaphore cs2("CS2", 1, 1);
-
-	CDataPool dp2("MyDataPoolName", sizeof(struct MyDataPool));
+	
+	CDataPool dp1("MyDataPoolName1", sizeof(struct MyDataPool));
+	dataPoolPointer1 = (struct MyDataPool*)dp1.LinkDataPool(); // link datapool
+	CDataPool dp2("MyDataPoolName2", sizeof(struct MyDataPool));
 	dataPoolPointer2 = (struct MyDataPool*)dp2.LinkDataPool(); // link datapool
 
 	cout << "Producer 2 is running..." << endl;
