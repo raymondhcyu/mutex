@@ -21,8 +21,11 @@ int main(void) {
 
 	CMutex M("MyMutex"); // local mutex created with inital value 1, meaning resource free
 
-	// Added Mutex, takes longer b/c child process needs to wait for signal to be clear/to be 1
-	// Allows both for loops in parent and child to complete, so result is 800,000
+	/*	Added Mutex, takes longer b/c child process needs to wait for signal to be clear/to be 1
+		Allows both for loops in parent and child to complete, so result is 800,000
+		Time-slicing: a = a + 1 instruction actually 3 instructions in assembly
+		B/t cores/processes: a still a shared resource, can't gurantee that it'll be free
+	*/
 	for (unsigned long long int i = 0; i < 400000; i++)
 	{
 		M.Wait();
