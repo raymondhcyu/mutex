@@ -7,7 +7,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Q8ParentMutex", "CPEN333Lab
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Q8ChildMutex", "Q8ChildMutex\Q8ChildMutex.vcxproj", "{D91C18C6-A969-4E89-ADAF-8CA3A8354568}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PartB", "PartB\PartB.vcxproj", "{519DA8B0-5596-4A2E-BF57-130A14364B01}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PartBMutex", "PartB\PartB.vcxproj", "{519DA8B0-5596-4A2E-BF57-130A14364B01}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PartBAtomic", "PartBAtomic\PartBAtomic.vcxproj", "{3ACF2692-2170-4080-8FB3-7A6F18CCCA02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{519DA8B0-5596-4A2E-BF57-130A14364B01}.Release|x64.Build.0 = Release|x64
 		{519DA8B0-5596-4A2E-BF57-130A14364B01}.Release|x86.ActiveCfg = Release|Win32
 		{519DA8B0-5596-4A2E-BF57-130A14364B01}.Release|x86.Build.0 = Release|Win32
+		{3ACF2692-2170-4080-8FB3-7A6F18CCCA02}.Debug|x64.ActiveCfg = Debug|x64
+		{3ACF2692-2170-4080-8FB3-7A6F18CCCA02}.Debug|x64.Build.0 = Debug|x64
+		{3ACF2692-2170-4080-8FB3-7A6F18CCCA02}.Debug|x86.ActiveCfg = Debug|Win32
+		{3ACF2692-2170-4080-8FB3-7A6F18CCCA02}.Debug|x86.Build.0 = Debug|Win32
+		{3ACF2692-2170-4080-8FB3-7A6F18CCCA02}.Release|x64.ActiveCfg = Release|x64
+		{3ACF2692-2170-4080-8FB3-7A6F18CCCA02}.Release|x64.Build.0 = Release|x64
+		{3ACF2692-2170-4080-8FB3-7A6F18CCCA02}.Release|x86.ActiveCfg = Release|Win32
+		{3ACF2692-2170-4080-8FB3-7A6F18CCCA02}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

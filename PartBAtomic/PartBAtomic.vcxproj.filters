@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\rt.cpp">
+    <ClCompile Include="..\PartB\PartBAtomic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PartBMutex.cpp">
+    <ClCompile Include="..\rt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -20,10 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{519DA8B0-5596-4A2E-BF57-130A14364B01}</ProjectGuid>
-    <RootNamespace>PartB</RootNamespace>
+    <ProjectGuid>{3ACF2692-2170-4080-8FB3-7A6F18CCCA02}</ProjectGuid>
+    <RootNamespace>PartBAtomic</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>PartBMutex</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -124,8 +123,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\PartB\PartBAtomic.cpp" />
     <ClCompile Include="..\rt.cpp" />
-    <ClCompile Include="PartBMutex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\rt.h" />
